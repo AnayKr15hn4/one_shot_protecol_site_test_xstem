@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xstem | Unlock your business potential</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=IBM+Plex+Mono&family=Outfit:wght@400;600&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- SVG Noise Filter -->
+    <svg style="display:none;">
+      <filter id="noiseFilter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" stitchTiles="stitch"/>
+        <feColorMatrix type="matrix" values="1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 0.05 0" />
+      </filter>
+    </svg>
+    <div class="noise-overlay"></div>
+
+    <nav class="nav-container">
+      <div class="nav-pill">
+        <a href="#" class="nav-logo">xstem</a>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#protocol">Protocol</a>
+        </div>
+        <button class="cta-button nav-cta">Unlock</button>
+      </div>
+    </nav>
+
+    <section class="hero" id="hero">
+      <div class="hero-bg" style="background-image: url('/hero-bg.png');"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="hero-sans">Innovation is the</span><br/>
+          <span class="hero-serif">Catalyst.</span>
+        </h1>
+        <p class="hero-subtitle">Allowing high school students to unlock their business potential.</p>
+        <button class="cta-button hero-cta">Unlock your business potential</button>
+      </div>
+    </section>
+
+    <!-- C. FEATURES -->
+    <section class="features" id="features">
+      <div class="features-grid">
+        
+        <!-- Card 1: Diagnostic Shuffler (Innovation) -->
+        <div class="feature-card" id="card-innovation">
+          <h3 class="card-title">Innovation</h3>
+          <p class="card-desc">Continuous ideation pipeline.</p>
+          <div class="shuffler-container">
+            <div class="shuffler-card card-1">Market Disruption</div>
+            <div class="shuffler-card card-2">Agile Strategies</div>
+            <div class="shuffler-card card-3">Creative Problem Solving</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Telemetry Typewriter (Collaboration) -->
+        <div class="feature-card" id="card-collaboration">
+          <h3 class="card-title">Collaboration</h3>
+          <p class="card-desc">Real-time synergy feed.</p>
+          <div class="telemetry-container">
+            <div class="live-feed-badge"><span class="pulse-dot"></span> Live Feed</div>
+            <div class="typewriter-text" id="typewriter"></div><span class="cursor">_</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Cursor Protocol Scheduler (Growth) -->
+        <div class="feature-card" id="card-growth">
+          <h3 class="card-title">Growth</h3>
+          <p class="card-desc">Scheduled metric scaling.</p>
+          <div class="scheduler-container">
+            <div class="week-grid">
+              <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+              <div class="day-cell"></div><div class="day-cell"></div><div class="day-cell"></div><div class="day-cell" id="target-day"></div><div class="day-cell"></div><div class="day-cell"></div><div class="day-cell"></div>
+            </div>
+            <button class="save-btn" id="target-save">Save</button>
+            <svg class="animated-cursor" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 3L18.5 16H11.5L9.5 22L5.5 3Z" fill="#CC5833" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- D. PHILOSOPHY -->
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy-bg" style="background-image: url('/philosophy-bg.png');"></div>
+      <div class="philosophy-content">
+        <p class="phil-common">Most organizations focus on: theoretical business models.</p>
+        <p class="phil-diff">We focus on: <span class="phil-accent">organic tech.</span></p>
+      </div>
+    </section>
+
+    <!-- E. PROTOCOL -->
+    <section class="protocol" id="protocol">
+      <div class="protocol-card" id="pc-1">
+        <div class="pc-canvas"><svg width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="#CC5833" stroke-width="2" fill="none" class="rotator"/></svg></div>
+        <div class="pc-content">
+          <div class="pc-step">01</div>
+          <h3 class="pc-title">Discover</h3>
+          <p class="pc-desc">Uncovering the underlying structures<br/>of modern entrepreneurship.</p>
+        </div>
+      </div>
+      <div class="protocol-card" id="pc-2">
+        <div class="pc-canvas"><div class="scanner"><div class="laser"></div></div></div>
+        <div class="pc-content">
+          <div class="pc-step">02</div>
+          <h3 class="pc-title">Analyze</h3>
+          <p class="pc-desc">Mapping high school potential<br/>to real-world business opportunities.</p>
+        </div>
+      </div>
+      <div class="protocol-card" id="pc-3">
+        <div class="pc-canvas">
+          <svg width="100" height="50" viewBox="0 0 100 50">
+            <path d="M0,25 L30,25 L40,10 L50,40 L60,25 L100,25" stroke="#CC5833" stroke-width="2" fill="none" class="ekg-path"/>
+          </svg>
+        </div>
+        <div class="pc-content">
+          <div class="pc-step">03</div>
+          <h3 class="pc-title">Execute</h3>
+          <p class="pc-desc">Deploying organic strategies<br/>for sustainable growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- F. FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h2 class="footer-logo">xstem</h2>
+          <p class="footer-desc">Unlock your business potential.</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-col">
+            <h4>Explore</h4>
+            <a href="#">About</a>
+            <a href="#">Features</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="link-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 xstem. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
